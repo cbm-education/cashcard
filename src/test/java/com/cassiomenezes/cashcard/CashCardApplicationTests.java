@@ -74,7 +74,7 @@ class CashCardApplicationTests {
 		assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
 
 		DocumentContext documentContext = JsonPath.parse(response.getBody());
-		int cashCardCount = documentContext.read("$.lenght()");
+		int cashCardCount = documentContext.read("$.length()");
 		assertThat(cashCardCount).isEqualTo(3);
 
 		JSONArray ids = documentContext.read("$..id");
