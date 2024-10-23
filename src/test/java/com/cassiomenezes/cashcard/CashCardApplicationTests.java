@@ -55,7 +55,7 @@ class CashCardApplicationTests {
 	@Test
 	@DirtiesContext
 	void shouldCreateANewCashCard() {
-		CashCard newCashCard = new CashCard(null, 250.00, "sarah1");
+		CashCard newCashCard = new CashCard(null, 250.00, null);
 
 		ResponseEntity<Void> createResponse = restTemplate
 				.withBasicAuth("sarah1", "hu@!s6G-0")
