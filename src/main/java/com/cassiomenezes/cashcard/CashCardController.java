@@ -10,6 +10,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
 import java.security.Principal;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -41,7 +42,7 @@ public class CashCardController {
 	}
 
 	@GetMapping
-	private ResponseEntity<Iterable<CashCard>> findAll(Pageable pageable, Principal principal) {
+	private ResponseEntity<List<CashCard>> findAll(Pageable pageable, Principal principal) {
 		Page<CashCard> page = cashCardRepository.findByOwner(principal.getName(),
 				PageRequest.of(
 						pageable.getPageNumber(),

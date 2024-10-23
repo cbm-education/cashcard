@@ -36,7 +36,7 @@ public class SecurityConfig {
 		User.UserBuilder users = User.builder();
 		UserDetails sarah = users
 				.username("sarah1")
-				.password(passwordEncoder.encode("hu@!s6G-0"))
+				.password(passwordEncoder.encode("abc123"))
 				.roles("CARD-OWNER") // No roles for now
 				.build();
 		UserDetails hankOwnsNoCards = users
